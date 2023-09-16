@@ -14,9 +14,9 @@ class Trie:
         """Konstruktori, antaa trien juureksi Node-olion.
         """
         self.root = Node()
-    
+
     def add(self, sequence: str):
-        """Lisää trieen uuden nuottisekvenssin. 
+        """Lisää trieen uuden nuottisekvenssin.
 
         Args:
             sequence (str): Merkkijonona esitetty nuottisekvenssi.
@@ -28,7 +28,7 @@ class Trie:
                 node.children[note] = Node()
             node = node.children[note]
 
-    
+
 
 if __name__ == "__main__":
     t = Trie()
