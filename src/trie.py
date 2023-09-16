@@ -2,24 +2,24 @@ class Node:
     """Luokka, joka kuvaa yksittäistä solmua trie-puussa.
     """
     def __init__(self):
-        """Määritellään sanakirjan solmulla olevat lapset.
+        """Konstruktori, määrittelee solmulla olevat lapset.
         """
         self.children = {}
 
 
 class Trie:
-    """Luokka, joka esittää trie-tietokantaa.
+    """Luokka, joka kuvaa trietä. Sisältää kaiken opetusmusiikin nuottisekvensseinä.
     """
     def __init__(self):
-        """Juureksi annetaan Node-olio.
+        """Konstruktori, antaa trien juureksi Node-olion.
         """
         self.root = Node()
     
     def add(self, sequence: str):
-        """Lisää trieen uuden nuottisekvenssin alkaen juuresta. 
+        """Lisää trieen uuden nuottisekvenssin. 
 
         Args:
-            sequence (str): Merkkijonona esitetty nuottisekvenssi, esim. "ceg".
+            sequence (str): Merkkijonona esitetty nuottisekvenssi.
         """
         node = self.root
 
@@ -27,4 +27,9 @@ class Trie:
             if note not in node.children:
                 node.children[note] = Node()
             node = node.children[note]
-        
+
+    
+
+if __name__ == "__main__":
+    t = Trie()
+    t.add("ceg")
