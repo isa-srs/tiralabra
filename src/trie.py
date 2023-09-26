@@ -5,6 +5,8 @@ class Node:
         """Konstruktori, määrittelee solmulla olevat lapset.
         """
         self.children = {}
+        self.name = ''
+
 
 
 class Trie:
@@ -25,11 +27,12 @@ class Trie:
 
         for note in sequence:
             if note not in node.children:
-                node.children[note] = Node()
-            node = node.children[note]
+                node.children[note] = []
+                node.name = note
+            node.children[note].append(Node())
+            node = node.children[note][-1]
 
 
-
-if __name__ == "__main__":
-    t = Trie()
-    t.add("ceg")
+# if __name__ == "__main__":
+#     t = Trie()
+#     t.add("ceg")
