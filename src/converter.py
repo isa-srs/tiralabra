@@ -10,22 +10,22 @@ class Converter:
         }
         self.converted = []
 
-    def read_song_file(self, song):
+    def read_song_file(self, file_path):
         """Lukee valittua kappaletta vastaavan tiedoston ja tallentaa sen muutetut nuotit.
 
         Args:
-            song: Valittu kappaletiedosto.
+            file_path: Valittu kappaletiedosto.
 
         Returns:
             Muutetut nuotit listana.
         """
-        with open(song) as song:
+        with open(file_path, encoding="utf-8") as song:
             melody = song.read()
             for note in melody:
                 self.converted.append(self.conversion[note])
         return self.converted
 
 
-if __name__ == "__main__":
-    file2 = 'src/ukkonooatesti.txt'
-    print(Converter().read_song_file(file2))
+# if __name__ == "__main__":
+#     file2 = 'src/ukkonooatesti.txt'
+#     print(Converter().read_song_file(file2))
