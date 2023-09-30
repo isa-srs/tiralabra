@@ -4,6 +4,7 @@ Valmis sovellus tulee olemaan melko yksinkertainen musiikkigeneraattori, joka en
 
 Dokumentaatio:
 - [Määrittelydokumentti](https://github.com/isa-srs/tiralabra/blob/main/dokumentaatio/maarittelydokumentti.md)
+- [Testausdokumentti](https://github.com/isa-srs/tiralabra/bol/main/dokumentaatio/testaus.md)
 
 Viikkoraportit:
 - [Viikkoraportti 1](https://github.com/isa-srs/tiralabra/blob/main/dokumentaatio/viikkoraportit/viikkoraportti1.md)
