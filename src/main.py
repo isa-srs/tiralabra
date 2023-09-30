@@ -7,7 +7,7 @@ class Main:
     def __init__(self):
         """Konstruktori.
         """
-        self.actions = {'0': 'ukkonooatesti.txt'}
+        self.actions = {'0': 'ukkonooa.txt'}
         self.converter = Converter()
         self.error = 'Syöttämäsi teksti ei kelpaa. Tarkista syöte ja yritä uudestaan.'
 
@@ -24,7 +24,7 @@ class Main:
             elif action in self.actions:
                 print('\n(generointi)')
                 print('(ukko nooa sävelkorkeudet):')
-                print(self.converter.read_song_file(f'src/{self.actions[action]}'))
+                print(self.converter.read_song_file(f'src/data/{self.actions[action]}'))
 
             else:
                 print(self.error)
